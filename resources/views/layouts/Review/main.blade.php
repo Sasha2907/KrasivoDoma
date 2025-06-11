@@ -15,7 +15,7 @@
 <body>
 <header class="site-header">
     <div class="logo">
-        <a href="{{url('/main')}}"><img src="/Images/logo1.png" alt="Logo"></a>
+        <a href="{{url('/main')}}"><img src="Images/logo1.png" alt="Logo"></a>
     </div>
     <nav class="navigation">
         <ul class="nav-list">
