@@ -4,7 +4,7 @@
         <section class="about-header">
             <div class="container">
                 <div class="about-logo">
-                    <img src="/Images/logoCircle.png" alt="О компании">
+                    <img src="/images/logoCircle.png" alt="О компании">
                 </div>
                 <div class="about-text">
                     <h1>О нашей компании</h1>
@@ -20,17 +20,17 @@
                 <h2>Наши преимущества</h2>
                 <div class="advantages-grid">
                     <div class="advantage">
-                        <img src="/Images/Высокое_качество.jpg" alt="Качество">
+                        <img src="/images/Высокое_качество.jpg" alt="Качество">
                         <h3>Высокое качество</h3>
                         <p>Мы используем только лучшие материалы для изготовления наших изделий.</p>
                     </div>
                     <div class="advantage">
-                        <img src="/Images/Современный_Дизайн.jpg" alt="Дизайн">
+                        <img src="/images/Современный_Дизайн.jpg" alt="Дизайн">
                         <h3>Современный дизайн</h3>
                         <p>Наши шторы гармонично дополнят интерьер любого помещения.</p>
                     </div>
                     <div class="advantage">
-                        <img src="/Images/Индивидуальный_подход.jpg" alt="Сервис">
+                        <img src="/images/Индивидуальный_подход.jpg" alt="Сервис">
                         <h3>Индивидуальный подход</h3>
                         <p>Мы учитываем все пожелания клиентов при подборе штор.</p>
                     </div>

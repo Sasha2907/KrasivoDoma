@@ -33,7 +33,7 @@
         @if(Auth::check())
         <div class="logo text-center">
             <a href="{{ route('dashboard') }}">
-                <img src="/Images/UserImage.png" alt="Аватар" style="width: 30px; height: 30px;">
+                <img src="/images/UserImage.png" alt="Аватар" style="width: 30px; height: 30px;">
                 <div style="font-size: 14px; margin-top: 5px;">
                     {{ Auth::user()->name }}
                 </div>
@@ -51,7 +51,7 @@
     <div class="footer-container">
         <!-- Первый столбец -->
         <div class="footer-column">
-            <img src="/Images/logo1.png" alt="Логотип" class="footer-logo">
+            <img src="/images/logo1.png" alt="Логотип" class="footer-logo">
             <!-- <p class="footer-description">Компания "Шторы в каждый дом" была основана с целью предоставить жителям Гродно и
                 окрестностей качественные и стильные текстильные решения для их домов и офисов. Мы уверены, что шторы —
                 это не просто функциональный элемент, но и важная часть интерьера, способная подчеркнуть

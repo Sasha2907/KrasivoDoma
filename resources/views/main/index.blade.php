@@ -59,7 +59,7 @@
         <!-- Левая панель с текстом -->
         <div class="info-panel">
             <div class="logo-header">
-                <img src="/Images/logoCircle.png" alt="Logo" class="logo">
+                <img src="/images/logoCircle.png" alt="Logo" class="logo">
                 <h2>О компании</h2>
             </div>
             <!-- <p class="description">
@@ -79,13 +79,13 @@
 
         <!-- Правая часть с изображением -->
         <div class="image-container ">
-            <img src="/Images/aboutCompany_img.jpg" alt="Store Image" class="background-image">
+            <img src="/images/aboutCompany_img.jpg" alt="Store Image" class="background-image">
         </div>
     </div>
     <div class="catalog-block">
         <!-- Заголовок -->
         <div class="catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <h2 class="catalog-title">Каталог</h2>
         </div>
 
@@ -94,31 +94,31 @@
             <!-- Блоки каталога -->
             <a href="{{route('shtory.index')}}">
                 <div class="catalog-item">
-                    <img src="/Images/Шторы.jpg" alt="Блок 1" class="catalog-image">
+                    <img src="/images/Шторы.jpg" alt="Блок 1" class="catalog-image">
                     <h3 class="catalog-item-title">Шторы</h3>
                 </div>
             </a>
             <a href="{{route('tyl.index')}}">
                 <div class="catalog-item">
-                    <img src="/Images/Тюль.jpeg" alt="Блок 2" class="catalog-image">
+                    <img src="/images/Тюль.jpeg" alt="Блок 2" class="catalog-image">
                     <h3 class="catalog-item-title">Тюль</h3>
                 </div>
             </a>
             <a href="{{route('rimskieShtory.index')}}">
                 <div class="catalog-item">
-                    <img src="/Images/Римские_шторы.jpg" alt="Блок 3" class="catalog-image">
+                    <img src="/images/Римские_шторы.jpg" alt="Блок 3" class="catalog-image">
                     <h3 class="catalog-item-title">Римские шторы</h3>
                 </div>
             </a>
             <a href="{{route('pocrivala.index')}}">
                 <div class="catalog-item">
-                    <img src="/Images/Покрывала.jpg" alt="Блок 4" class="catalog-image">
+                    <img src="/images/Покрывала.jpg" alt="Блок 4" class="catalog-image">
                     <h3 class="catalog-item-title">Покрывала</h3>
                 </div>
             </a>
             <a href="{{route('decorPodushki.index')}}">
                 <div class="catalog-item">
-                    <img src="/Images/Декоративные_подушки.jpg" alt="Блок 6" class="catalog-image">
+                    <img src="/images/Декоративные_подушки.jpg" alt="Блок 6" class="catalog-image">
                     <h3 class="catalog-item-title">Декоративные подушки</h3>
                 </div>
             </a>
