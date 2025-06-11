@@ -31,13 +31,13 @@ class SupplierController extends Controller
     public function index(Request $request)
     {
         $suppliers = Supplier::all();
-        return view('suppliers.index', compact('suppliers'));
+        return view('Suppliers.index', compact('suppliers'));
     }
 
     public function create()
     {
         $suppliers = Supplier::all();
-        return view('suppliers.create');
+        return view('Suppliers.create');
     }
 
     public function store(Request $request)
@@ -63,7 +63,7 @@ class SupplierController extends Controller
 
     public function edit(Supplier $supplier)
     {
-        return view('suppliers.edit', compact('supplier'));
+        return view('Suppliers.edit', compact('supplier'));
     }
 
 

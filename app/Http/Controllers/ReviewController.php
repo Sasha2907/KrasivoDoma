@@ -45,13 +45,13 @@ class ReviewController extends Controller
         $reviews = $query->latest()->get();
         $users = User::whereIn('id', $reviews->pluck('user_id'))->get();
 
-        return view('reviews.index', compact('reviews', 'users'));
+        return view('Reviews.index', compact('reviews', 'users'));
     }
 
     public function create()
     {
         $review = Review::all();
-        return view('reviews.create');
+        return view('Reviews.create');
     }
 
     public function store(Request $request)

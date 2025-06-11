@@ -46,7 +46,7 @@ class SupplierAdminController extends Controller
         // Получаем поставщиков после фильтрации и сортировки
         $suppliers = $query->get();
 
-        return view('admin.suppliers.index', compact('suppliers', 'sortOrder'));
+        return view('Admin.Suppliers.index', compact('suppliers', 'sortOrder'));
 
 //        $suppliers = Supplier::all();
 //        return view('admin.suppliers.index', compact('suppliers'));
@@ -55,7 +55,7 @@ class SupplierAdminController extends Controller
     public function create()
     {
         $suppliers = Supplier::all();
-        return view('admin.suppliers.create');
+        return view('Admin.Suppliers.create');
     }
 
     public function store(Request $request)
@@ -81,7 +81,7 @@ class SupplierAdminController extends Controller
 
     public function edit(Supplier $supplier)
     {
-        return view('admin.suppliers.edit', compact('supplier'));
+        return view('Admin.Suppliers.edit', compact('supplier'));
     }
 
 

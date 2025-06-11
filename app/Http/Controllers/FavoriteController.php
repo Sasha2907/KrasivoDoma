@@ -65,7 +65,7 @@ class FavoriteController extends Controller
         $countries = Supplier::select('country')->distinct()->get();
 
 
-        return view('favorites.index', compact('favorites', 'categories', 'countries','configs'));
+        return view('Favorites.index', compact('favorites', 'categories', 'countries','configs'));
 
 
 //        $favorites = Favorites::where('user_id', Auth::id())->with('product')->get();

@@ -1,4 +1,4 @@
-@extends('layouts.review.main')
+@extends('layouts.Review.main')
 @section('content')
     <div class="container mt-3">
         <form action="{{route('shtory.store')}}" method="post" enctype="multipart/form-data">

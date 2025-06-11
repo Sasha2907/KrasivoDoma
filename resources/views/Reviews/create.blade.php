@@ -1,4 +1,4 @@
-@extends('layouts.review.main')
+@extends('layouts.Review.main')
 
 @section('content')
 <div class="container mt-5 mb-5">

@@ -47,14 +47,14 @@ class TylController extends Controller
         // Получаем результаты запроса
         $products = $query->paginate(6)->withQueryString();
         $countries = Supplier::select('country')->distinct()->pluck('country');
-        return view('catalogs.tyl.index', compact('products', 'countries'));
+        return view('Catalogs.Tyl.index', compact('products', 'countries'));
     }
 
     public function create()
     {
         $products = Products::where('category_id', '2')->get();
         $suppliers = Supplier::all();
-        return view('catalogs.tyl.create', compact('products', 'suppliers'));
+        return view('Catalogs.Tyl.create', compact('products', 'suppliers'));
     }
 
     public function store(Request $request)
@@ -84,7 +84,7 @@ class TylController extends Controller
     public function edit(Products $product)
     {
         $suppliers = Supplier::all();
-        return view('catalogs.tyl.edit', compact('product', 'suppliers'));
+        return view('Catalogs.Tyl.edit', compact('product', 'suppliers'));
     }
 
     public function update(Request $request, Products $product)
@@ -119,7 +119,7 @@ class TylController extends Controller
     {
         $supplier_id = $product->supplier->id;
         $supplier = Supplier::where('id',$supplier_id)->first();
-        return view('catalogs.tyl.show', compact('product', 'supplier'));
+        return view('Catalogs.Tyl.show', compact('product', 'supplier'));
     }
 
     public function destroy(Products $product){

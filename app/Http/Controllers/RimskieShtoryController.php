@@ -47,14 +47,14 @@ class RimskieShtoryController extends Controller
         // Получаем результаты запроса
         $products = $query->paginate(6)->withQueryString();
         $countries = Supplier::select('country')->distinct()->pluck('country');
-        return view('catalogs.rimskieshtory.index', compact('products', 'countries'));
+        return view('Catalogs.RimskieShtory.index', compact('products', 'countries'));
     }
 
     public function create()
     {
         $products = Products::where('category_id', '3')->get();
         $suppliers = Supplier::all();
-        return view('catalogs.rimskieshtory.create', compact('products', 'suppliers'));
+        return view('Catalogs.RimskieShtory.create', compact('products', 'suppliers'));
     }
 
     public function store(Request $request)
@@ -84,7 +84,7 @@ class RimskieShtoryController extends Controller
     public function edit(Products $product)
     {
         $suppliers = Supplier::all();
-        return view('catalogs.rimskieshtory.edit', compact('product', 'suppliers'));
+        return view('Catalogs.RimskieShtory.edit', compact('product', 'suppliers'));
     }
 
     public function update(Request $request, Products $product)
@@ -119,7 +119,7 @@ class RimskieShtoryController extends Controller
     {
         $supplier_id = $product->supplier->id;
         $supplier = Supplier::where('id',$supplier_id)->first();
-        return view('catalogs.rimskieshtory.show', compact('product', 'supplier'));
+        return view('Catalogs.RimskieShtory.show', compact('product', 'supplier'));
     }
 
     public function destroy(Products $product){

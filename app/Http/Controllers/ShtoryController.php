@@ -48,14 +48,14 @@ class ShtoryController extends Controller
         // Получаем результаты запроса
         $shtory = $query->paginate(6)->withQueryString();
         $countries = Supplier::select('country')->distinct()->pluck('country');
-        return view('catalogs.shtory.index', compact('shtory', 'countries'));
+        return view('Catalogs.Shtory.index', compact('shtory', 'countries'));
     }
 
     public function create()
     {
         $shtory = Products::where('category_id', '1')->get();
         $suppliers = Supplier::all();
-        return view('catalogs.shtory.create', compact('shtory', 'suppliers'));
+        return view('Catalogs.Shtory.create', compact('shtory', 'suppliers'));
     }
 
     public function store(Request $request)
@@ -86,7 +86,7 @@ class ShtoryController extends Controller
     public function edit(Products $product)
     {
         $suppliers = Supplier::all();
-        return view('catalogs.shtory.edit', compact('product', 'suppliers'));
+        return view('Catalogs.Shtory.edit', compact('product', 'suppliers'));
     }
 
     public function update(Request $request, Products $product)
@@ -121,7 +121,7 @@ class ShtoryController extends Controller
     {
         $supplier_id = $product->supplier->id;
         $supplier = Supplier::where('id',$supplier_id)->first();
-        return view('catalogs.shtory.show', compact('product', 'supplier'));
+        return view('Catalogs.Shtory.show', compact('product', 'supplier'));
     }
 
     public function destroy(Products $product){

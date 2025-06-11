@@ -47,14 +47,14 @@ class DecorPodushkiController extends Controller
         // Получаем результаты запроса
         $products = $query->paginate(6)->withQueryString();
         $countries = Supplier::select('country')->distinct()->pluck('country');
-        return view('catalogs.decorPodushki.index', compact('products', 'countries'));
+        return view('Catalogs.DecorPodushki.index', compact('products', 'countries'));
     }
 
     public function create()
     {
         $products = Products::where('category_id', '5')->get();
         $suppliers = Supplier::all();
-        return view('catalogs.decorPodushki.create', compact('products', 'suppliers'));
+        return view('Catalogs.DecorPodushki.create', compact('products', 'suppliers'));
     }
 
     public function store(Request $request)
@@ -84,7 +84,7 @@ class DecorPodushkiController extends Controller
     public function edit(Products $product)
     {
         $suppliers = Supplier::all();
-        return view('catalogs.decorPodushki.edit', compact('product', 'suppliers'));
+        return view('Catalogs.DecorPodushki.edit', compact('product', 'suppliers'));
     }
 
     public function update(Request $request, Products $product)
@@ -119,7 +119,7 @@ class DecorPodushkiController extends Controller
     {
         $supplier_id = $product->supplier->id;
         $supplier = Supplier::where('id',$supplier_id)->first();
-        return view('catalogs.decorPodushki.show', compact('product', 'supplier'));
+        return view('Catalogs.DecorPodushki.show', compact('product', 'supplier'));
     }
 
     public function destroy(Products $product){

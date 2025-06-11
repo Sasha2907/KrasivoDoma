@@ -32,13 +32,13 @@ class ReviewController extends Controller
     {
         $reviews = Review::all();
         $users=User::all();
-        return view('admin.reviews.index',compact('reviews','users'));
+        return view('Admin.Reviews.index',compact('reviews','users'));
     }
 
     public function create()
     {
         $review = Review::all();
-        return view('reviews.create');
+        return view('Reviews.create');
     }
 
     public function store(Request $request)

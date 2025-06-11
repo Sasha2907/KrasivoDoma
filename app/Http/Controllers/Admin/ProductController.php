@@ -69,7 +69,7 @@ class ProductController extends Controller
         $countries = Supplier::select('country')->distinct()->pluck('country');
         $categories = Categories::all();
 
-        return view('admin.products.index', compact('products', 'countries', 'categories'));
+        return view('Admin.Products.index', compact('products', 'countries', 'categories'));
 
 //        $query = Products::all();
 //        $products = $query;
@@ -82,7 +82,7 @@ class ProductController extends Controller
         $products = Products::all();
         $suppliers = Supplier::all();
         $categories = Categories::all();
-        return view('admin.products.create', compact('products', 'suppliers', 'categories'));
+        return view('Admin.Products.create', compact('products', 'suppliers', 'categories'));
     }
 
     public function store(Request $request)
@@ -114,7 +114,7 @@ class ProductController extends Controller
     {
         $suppliers = Supplier::all();
         $categories = Categories::all();
-        return view('admin.products.edit1', compact('product', 'suppliers', 'categories'));
+        return view('Admin.Products.edit1', compact('product', 'suppliers', 'categories'));
     }
 
     public function update(Request $request, Products $product)
@@ -149,7 +149,7 @@ class ProductController extends Controller
     {
         $supplier_id = $product->supplier->id;
         $supplier = Supplier::where('id',$supplier_id)->first();
-        return view('admin.products.show', compact('product', 'supplier'));
+        return view('Admin.Products.show', compact('product', 'supplier'));
     }
 
     public function destroy(Products $product){
@@ -190,7 +190,7 @@ class ProductController extends Controller
 
         // Получаем товары после фильтрации
         $products = $query->get();
-        $pdf = FacadePdf::loadView('admin.products.pdf', compact('products'))// Загружаем представление
+        $pdf = FacadePdf::loadView('Admin.Products.pdf', compact('products'))// Загружаем представление
             ->setOptions(['deafultFont'=> 'DejaVu Sans']);
 //        return $pdf->stream('products.pdf');
         return $pdf->download('products.pdf'); // Отдаем файл на скачивание

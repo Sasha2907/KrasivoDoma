@@ -31,7 +31,7 @@ class AdminPreorderController extends Controller
 
         $preorders = $query->paginate(10);
 
-        return view('admin.preorders.index', compact('preorders'));
+        return view('Admin.preorders.index', compact('preorders'));
     }
 
     public function approve(Preorder $preorder)
@@ -59,6 +59,6 @@ class AdminPreorderController extends Controller
         $preorder->items()->delete();
         $preorder->delete();
 
-        return redirect()->route('admin.preorders.index')->with('success', 'Заявка удалена.');
+        return redirect()->route('Admin.preorders.index')->with('success', 'Заявка удалена.');
     }
 }

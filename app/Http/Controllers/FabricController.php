@@ -48,12 +48,12 @@ class FabricController extends Controller
     public function index()
     {
         $fabrics = Fabric::all();
-        return view('admin.fabrics.index', compact('fabrics'));
+        return view('Admin.fabrics.index', compact('fabrics'));
     }
 
     public function edit(Fabric $fabric)
     {
-        return view('admin.fabrics.edit', compact('fabric'));
+        return view('Admin.fabrics.edit', compact('fabric'));
     }
 
     public function update(Request $request, Fabric $fabric)

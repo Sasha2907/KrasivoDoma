@@ -71,7 +71,7 @@ public function create()
     $favorites = $user->favorites()->with('product')->get();
     $configs = $user->configurations()->get();
     
-    return view('favorites.index', compact('favorites', 'configs'));
+    return view('Favorites.index', compact('favorites', 'configs'));
 }
 
 public function confirm(Request $request)
