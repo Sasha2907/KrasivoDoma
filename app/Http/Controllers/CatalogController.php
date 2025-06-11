@@ -29,6 +29,6 @@ class CatalogController extends Controller
      */
     public function index(Request $request)
     {
-        return view('catalog.index');
+        return view('Catalog.index');
     }
 }
