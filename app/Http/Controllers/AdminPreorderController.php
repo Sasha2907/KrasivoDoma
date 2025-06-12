@@ -59,6 +59,6 @@ class AdminPreorderController extends Controller
         $preorder->items()->delete();
         $preorder->delete();
 
-        return redirect()->route('Admin.preorders.index')->with('success', 'Заявка удалена.');
+        return redirect()->route('admin.preorders.index')->with('success', 'Заявка удалена.');
     }
 }
