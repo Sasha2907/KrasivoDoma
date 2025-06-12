@@ -128,7 +128,7 @@
 </div> -->
 <div class="container mt-4 mb-5">
 <div class="catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <h2 class="catalog-title">Избранное</h2>
         </div>
 

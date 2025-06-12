@@ -3,7 +3,7 @@
 @section('content')
 <!-- <div class="container mb-4 mt-4">
         <div class="mb-4 mt-4 catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <p class="catalog-title">Конструктор</p>
         </div>
     
@@ -182,7 +182,7 @@ document.querySelectorAll('.select-sewing').forEach(card => {
 
 <div class="container mb-4 mt-4">
     <div class="mb-4 mt-4 catalog-header">
-        <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+        <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
         <p class="catalog-title">Конструктор</p>
     </div>
 

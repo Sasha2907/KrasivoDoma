@@ -87,7 +87,7 @@
             <a href="./index.html" class="brand-link">
                 <!--begin::Brand Image-->
                 <div class="logo1">
-                    <a href="{{url('/main')}}"><img src="/Images/logo1.png" alt="Logo"></a>
+                    <a href="{{url('/main')}}"><img src="/images/logo1.png" alt="Logo"></a>
                 </div>
             </a>
             <!--end::Brand Link-->

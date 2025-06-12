@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="mb-4 mt-4 catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <p class="catalog-title">Шторы</p>
         </div>
         <div class="mb-4 mt-4 catalog-header">
@@ -36,7 +36,7 @@
         <div class="d-flex flex-row flex-wrap mb-3">
             @foreach($shtory as $shtor)
 
-                <div class="card m-3 w-20" style="width: 18rem;">
+                <div class="card m-3 w-20" style="width: 18rem;"> 
                     <img src="{{ asset('storage/' . $shtor->image) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$shtor->name}}</h5>

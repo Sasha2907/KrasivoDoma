@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mb-3 mt-3">
     <div class="catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <h2 class="catalog-title">Отзывы</h2>
         </div>
     <form method="GET" action="{{ route('review.index') }}" class="mb-4">
