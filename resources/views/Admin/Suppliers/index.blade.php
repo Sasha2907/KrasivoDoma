@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="mb-4 mt-4 catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <p class="catalog-title">Поставщики</p>
         </div>
         <a href="{{route('admin.suppliers.create')}}" class="btn btn-primary mb-3">Добавить поставщика</a>

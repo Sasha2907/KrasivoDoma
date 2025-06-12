@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="mb-4 mt-4 catalog-header">
-            <img src="/Images/logoCircle.png" alt="Логотип" class="catalog-logo">
+            <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <p class="catalog-title">Товары</p>
         </div>
         <a href="{{ route('admin.products.exportPDF') }}" class="btn btn-danger mb-3">Экспорт в PDF</a>
