@@ -5,7 +5,7 @@
             <img src="/images/logoCircle.png" alt="Логотип" class="catalog-logo">
             <p class="catalog-title">Отзывы</p>
         </div>
-        <form method="GET" action="{{ route('review.index') }}" class="mb-4">
+        <form method="GET" action="{{ route('admin.review.index') }}" class="mb-4">
             <label for="date_filter" class="form-label">Показать отзывы за:</label>
             <select name="date_filter" id="date_filter" class="form-select w-auto d-inline-block">
                 <option value="">-- Все отзывы --</option>
