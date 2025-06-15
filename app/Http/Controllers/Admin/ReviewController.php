@@ -30,8 +30,18 @@ class ReviewController extends Controller
      */
     public function index(Request $request)
     {
-        $reviews = Review::all();
-        $users=User::all();
+        $query = Review::query();
+
+        if ($request->date_filter === 'week') {
+            $query->where('created_at', '>=', now()->subWeek());
+        } elseif ($request->date_filter === 'month') {
+            $query->where('created_at', '>=', now()->subMonth());
+        } elseif ($request->date_filter === 'year') {
+            $query->where('created_at', '>=', now()->subYear());
+        }
+
+        $reviews = $query->latest()->get();
+        $users = User::whereIn('id', $reviews->pluck('user_id'))->get();
         return view('Admin.Reviews.index',compact('reviews','users'));
     }
 
