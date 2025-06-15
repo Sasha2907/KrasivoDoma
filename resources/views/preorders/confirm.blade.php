@@ -76,7 +76,7 @@
         
         <div class="d-flex justify-content-between">
             <a href="/favorites" class="btn btn-outline-danger">Назад</a>
-            <button type="submit" class="btn btn-success">Подтвердитьы пред-заказ</button>
+            <button type="submit" class="btn btn-success">Подтвердить пред-заказ</button>
         </div>
     </form>
 </div>
