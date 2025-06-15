@@ -12,7 +12,7 @@ class FabricController extends Controller
 {
     public function create()
     {
-        return view('admin.fabrics.create');
+        return view('Admin.fabrics.create');
     }
 
     public function store(Request $request)
