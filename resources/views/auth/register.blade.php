@@ -8,7 +8,7 @@
                 <div class="card-header">Регистрация</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" autocomplete="off" action="{{ route('register')  }}">
                         @csrf
 
                         <div class="row mb-3">

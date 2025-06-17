@@ -14,21 +14,6 @@ use Illuminate\Support\Facades\Auth;
 
 class SupplierAdminController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index(Request $request)
     {
         $query = Supplier::query();
@@ -47,9 +32,6 @@ class SupplierAdminController extends Controller
         $suppliers = $query->get();
 
         return view('Admin.Suppliers.index', compact('suppliers', 'sortOrder'));
-
-//        $suppliers = Supplier::all();
-//        return view('admin.suppliers.index', compact('suppliers'));
     }
 
     public function create()
@@ -98,13 +80,5 @@ class SupplierAdminController extends Controller
         $supplier->update($data);
         return redirect()->route('admin.suppliers.index');
     }
-//    public function update(Supplier $supplier)
-//    {
-//        $data = request()->validate([
-//            'name' => 'required|string|max:1000',
-//            'country' => 'required|string|max:1000',
-//        ]);
-//        $supplier->update($data);
-//        return redirect()->route('supplier.index', $supplier->id);
-//    }
+
 }

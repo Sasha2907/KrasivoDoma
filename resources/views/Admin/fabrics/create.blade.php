@@ -15,7 +15,7 @@
         <i class="bi bi-arrow-left"></i> Назад
     </a>
 
-    <form method="POST" action="{{ route('fabrics.store') }}" enctype="multipart/form-data" class="bg-light p-4 rounded shadow-sm">
+    <form method="POST" autocomplete="off" action="{{ route('fabrics.store') }}" enctype="multipart/form-data" class="bg-light p-4 rounded shadow-sm">
         @csrf
 
         <div class="mb-3">

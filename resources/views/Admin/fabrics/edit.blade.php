@@ -11,7 +11,7 @@
         </div>
 
         <div class="card-body">
-            <form method="POST" action="{{ route('fabrics.update', $fabric) }}" enctype="multipart/form-data">
+            <form method="POST" autocomplete="off" action="{{ route('fabrics.update', $fabric) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

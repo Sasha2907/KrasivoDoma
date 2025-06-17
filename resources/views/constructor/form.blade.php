@@ -190,7 +190,7 @@ document.querySelectorAll('.select-sewing').forEach(card => {
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <form method="POST" action="{{ route('constructor.store') }}">
+    <form method="POST" autocomplete="off" action="{{ route('constructor.store') }}">
         @csrf
 
         <div class="form-group mb-4">

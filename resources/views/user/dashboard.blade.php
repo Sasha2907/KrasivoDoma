@@ -20,10 +20,10 @@
             </form>
         </div>
 
-        <h2 class="mb-3">Мои предзаказы</h2>
+        <h2 class="mb-3">Мои пред-заказы</h2>
         
         @if($preorders->isEmpty())
-            <div class="alert alert-info">У вас пока нет предзаказов</div>
+            <div class="alert alert-info">У вас пока нет пред-заказов</div>
             
         @else
             <div class="accordion" id="preordersAccordion">
