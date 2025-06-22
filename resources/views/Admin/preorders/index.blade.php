@@ -80,7 +80,7 @@
                                             $fabricPrice = $item->item->fabric->price ?? 0;
                                             $sewingPrice = $item->item->sewingType->price ?? 0;
 
-                                            $area = ($width) / 100; // площадь в м²
+                                            $area = ($width) / 100;
 
                                             $typeMultipliers = [
                                                 'curtains' => 1.0,
@@ -93,7 +93,7 @@
                                             if ($type == 'roman'){
                                                 $totalPrice = round(($fabricPrice * $area)+(115 * $area),2);
                                             }else{
-                                                $totalPrice = round(($fabricPrice * $area) * ($sewingPrice * $area), 2);
+                                                $totalPrice = round(($fabricPrice * $area) + ($sewingPrice * $area), 2);
                                             }
                                             
                                         @endphp 
