@@ -72,6 +72,7 @@
                                             ];
                                             $type = $item->item->product_type ?? 'unknown';
                                             $typeName = $typeMap[$type] ?? $type;
+                                            
 
                                             $width = $item->item->width ?? 0;  // берём из Configurations
                                             $height = $item->item->height ?? 0;
@@ -89,8 +90,12 @@
                                             ];
 
                                             $baseMultiplier = $typeMultipliers[$type] ?? 1.0;
-
-                                            $totalPrice = round(($fabricPrice * $width + $sewingPrice) * $baseMultiplier, 2);
+                                            if ($type == 'roman'){
+                                                $totalPrice = round(($fabricPrice * $area)+(115 * $area),2);
+                                            }else{
+                                                $totalPrice = round(($fabricPrice * $area) * ($sewingPrice * $area), 2);
+                                            }
+                                            
                                         @endphp
                                         <p>Тип: {{ $typeMap[$item->item->product_type] ?? $item->item->product_type }}</p>
                                         <p>Размер: {{ $item->item->width ?? '0' }}x{{ $item->item->height ?? '0' }} см</p>
