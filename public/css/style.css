@@ -67,6 +67,11 @@ li{
     display: flex;
     margin-right: 20px;
 }
+.nav-list1 {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
 
 .nav-list li {
     margin: 0 20px;
@@ -238,6 +243,9 @@ li{
 .carousel-fon{
     background-color: #eeee;
     padding: 20px 0;
+    width: 100%;
+    overflow: hidden;
+    
 }
 
 .carousel {
@@ -332,8 +340,9 @@ li{
     left: calc(40% + 50px); /* Расположить правее кнопки "Назад", но всё ещё левее изображения */
 }
 
-/* Адаптивные стили */
-@media (max-width: 1385px) {
+
+/* @media (max-width: 1385px) {
+
     .carousel-slide {
         flex-direction: column;
         text-align: center;
@@ -349,11 +358,11 @@ li{
     }
 
     .carousel-text h1 {
-        font-size: 1.5rem; /* Ещё меньше для узких экранов */
+        font-size: 1.5rem;
     }
 
     .carousel-text p {
-        font-size: 0.8rem; /* Ещё меньше для текста */
+        font-size: 0.8rem; 
     }
 
     .carousel-slide {
@@ -383,6 +392,40 @@ li{
     .carousel-text p {
         font-size: 0.9rem;
     }
+} */
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .carousel-image {
+        margin: 20px 0 0 0;
+        width: 100%;
+        display: none;
+
+    }
+
+    .carousel-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-text p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-button {
+        padding: 10px 12px;
+        font-size: 1.2rem;
+        bottom: 10px;
+    }
+}
+.auth-center-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
 }
 /*-----------------------------------------блок о компании-------------------------------------*/
 

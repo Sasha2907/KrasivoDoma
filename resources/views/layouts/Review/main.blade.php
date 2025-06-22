@@ -18,7 +18,7 @@
         <a href="{{url('/main')}}"><img src="/images/logo1.png" alt="Logo"></a>
     </div>
     <nav class="navigation">
-        <ul class="nav-list">
+        <ul class="nav-list ">
             @can('view',auth()->user())
             <li><a href="{{route('admin.review.index')}}">Admin</a></li>
             @endcan
@@ -30,19 +30,23 @@
             @endauth
             <li><a href="{{route('review.index')}}">Отзывы</a></li>
         </ul>
-        @if(Auth::check())
-        <div class="logo text-center">
-            <a href="{{ route('dashboard') }}">
-                <img src="/images/UserImage.png" alt="Аватар" style="width: 30px; height: 30px;">
-                <div style="font-size: 14px; margin-top: 5px;">
-                    {{ Auth::user()->name }}
-                </div>
-            </a>
+        <ul class="nav-list1"   >
+        <div class="auth-center-block">
+            @if(Auth::check())
+            <div class="logo text-center">
+                <a href="{{ route('dashboard') }}">
+                    <img src="/images/UserImage.png" alt="Аватар" style="width: 30px; height: 30px;">
+                    <div style="font-size: 14px; margin-top: 5px;">
+                        {{ Auth::user()->name }}
+                    </div>
+                </a>
+            </div>
+            @else
+                <!-- Если пользователь НЕ авторизован -->
+                <a href="{{ route('login') }}" class="btn btn-primary">Войти</a>
+            @endif
         </div>
-        @else
-            <!-- Если пользователь НЕ авторизован -->
-            <a href="{{ route('login') }}" class="btn btn-primary">Войти</a>
-        @endif
+        </ul>
     </nav>
     <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 </header>

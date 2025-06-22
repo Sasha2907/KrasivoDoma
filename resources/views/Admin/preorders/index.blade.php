@@ -70,6 +70,27 @@
                                                 'roman' => 'Римская штора',
                                                 'coverlet' => 'Покрывало',
                                             ];
+                                            $type = $item->item->product_type ?? 'unknown';
+                                            $typeName = $typeMap[$type] ?? $type;
+
+                                            $width = $item->item->width ?? 0;  // берём из Configurations
+                                            $height = $item->item->height ?? 0;
+
+                                            $fabricPrice = $item->item->fabric->price ?? 0;
+                                            $sewingPrice = $item->item->sewingType->price ?? 0;
+
+                                            $area = ($width) / 10000; // площадь в м²
+
+                                            $typeMultipliers = [
+                                                'curtains' => 1.0,
+                                                'tulle' => 0.8,
+                                                'roman' => 1.2,
+                                                'coverlet' => 1.1,
+                                            ];
+
+                                            $baseMultiplier = $typeMultipliers[$type] ?? 1.0;
+
+                                            $totalPrice = round(($fabricPrice * $width + $sewingPrice) * $baseMultiplier, 2);
                                         @endphp
                                         <p>Тип: {{ $typeMap[$item->item->product_type] ?? $item->item->product_type }}</p>
                                         <p>Размер: {{ $item->item->width ?? '0' }}x{{ $item->item->height ?? '0' }} см</p>
@@ -77,6 +98,7 @@
                                         @if($item->item->sewingType)
                                             <p>Пошив: {{ $item->item->sewingType->name }}</p>
                                         @endif
+                                        <p><strong>Примерная цена: {{ $totalPrice }} BYN</strong></p>
                                     </div>
                                 @else
                                     <div class="card-body">
