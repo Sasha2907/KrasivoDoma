@@ -80,7 +80,7 @@
                                             $fabricPrice = $item->item->fabric->price ?? 0;
                                             $sewingPrice = $item->item->sewingType->price ?? 0;
 
-                                            $area = ($width) / 10000; // площадь в м²
+                                            $area = ($width) / 100; // площадь в м²
 
                                             $typeMultipliers = [
                                                 'curtains' => 1.0,
@@ -96,7 +96,8 @@
                                                 $totalPrice = round(($fabricPrice * $area) * ($sewingPrice * $area), 2);
                                             }
                                             
-                                        @endphp
+                                        @endphp 
+                                        <br>
                                         <p>Тип: {{ $typeMap[$item->item->product_type] ?? $item->item->product_type }}</p>
                                         <p>Размер: {{ $item->item->width ?? '0' }}x{{ $item->item->height ?? '0' }} см</p>
                                         <p>Ткань: {{ $item->item->fabric->name ?? '-' }}</p>
