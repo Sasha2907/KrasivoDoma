@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateSlidePosition);
 
     // Автопрокрутка каждые 3 секунды
-    setInterval(nextSlide, 15000);
+    
 });
 /*----------------------кнопка вверх-----------------------*/
 // Прокрутка вверх страницы
