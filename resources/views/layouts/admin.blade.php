@@ -63,19 +63,21 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary sidebar-mini">
 <!--begin::App Wrapper-->
 <div class="app-wrapper">
     <!--begin::Header-->
     <nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
-        <div class="container-fluid">
-            <!--begin::Start Navbar Links-->
-            <ul class="navbar-nav">
-                <li class="nav-item d-none d-md-block"><a href="{{url('/main')}}" class="nav-link">На главную</a></li>
-            </ul>
-            <!--end::Start Navbar Links-->
-        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                    <i class="bi bi-list"></i> <!-- Bootstrap Icons: бургер -->
+                </a>
+            </li>
+            <li class="nav-item d-none d-md-block"><a href="{{url('/main')}}" class="nav-link">На главную</a></li>
+        </ul>
+        
         <!--end::Container-->
     </nav>
     <!--end::Header-->
