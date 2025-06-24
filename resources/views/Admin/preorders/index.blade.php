@@ -101,7 +101,7 @@
                                         <p>Тип: {{ $typeMap[$item->item->product_type] ?? $item->item->product_type }}</p>
                                         <p>Размер: {{ $item->item->width ?? '0' }}x{{ $item->item->height ?? '0' }} см</p>
                                         <p>Ткань: {{ $item->item->fabric->name ?? '-' }}</p>
-                                        @if($item->item->sewingType)
+                                        @if($item->item->sewingType && $item->item->product_type !== 'roman')
                                             <p>Пошив: {{ $item->item->sewingType->name }}</p>
                                         @endif
                                         <p><strong>Примерная цена: {{ $totalPrice }} BYN</strong></p>
