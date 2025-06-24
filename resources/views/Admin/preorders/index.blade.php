@@ -67,7 +67,7 @@
                                             $typeMap = [
                                                 'curtains' => 'Штора',
                                                 'tulle' => 'Тюль',
-                                                'roman' => 'Римская штора',
+                                                'roman_curtains' => 'Римская штора',
                                                 'coverlet' => 'Покрывало',
                                             ];
                                             $type = $item->item->product_type ?? 'unknown';

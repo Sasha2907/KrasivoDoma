@@ -87,7 +87,7 @@
             $productTypeNames = [
                 'curtains' => 'шторы',
                 'tulle' => 'тюль',
-                'roman' => 'римская штора',
+                'roman_curtains' => 'римская штора',
             ];
         @endphp
         @forelse($configs as $config)
