@@ -15,21 +15,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ShtoryController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index(Request $request)
     {
         $query = Products::where('category_id', '1');
@@ -104,7 +89,6 @@ class ShtoryController extends Controller
         } else {
             $imagePath = $product->image;
         }
-//        $imagePath = $request->file('image')->store('uploads', 'public');
         $data = [
             'name' => $request->input('name'),
             'material' => $request->input('material'),
