@@ -37,7 +37,7 @@ class ConstructorController extends Controller
             'quilting_method' => 'nullable|string'
         ]);
         if ($request->product_type === 'roman_curtains') {
-            $validated['sewing_type_id'] = 0;
+            $validated['sewing_type_id'] = 1;
         } else {
             // Выполняем дополнительную проверку sewing_type_id
             $request->validate([
