@@ -357,7 +357,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
     const fabricId = document.querySelector('input[name="fabric_id"]').value;
     const sewingId = document.querySelector('input[name="sewing_type_id"]').value;
 
-    if (type === 'curtains' || type === 'tulle' || type === 'roman_curtains') {
+    if (type === 'curtains' || type === 'tulle') {
         if (!fabricId) {
             e.preventDefault();
             showAlert('Пожалуйста, выберите ткань.');
@@ -370,7 +370,13 @@ document.querySelector('form').addEventListener('submit', function(e) {
             return;
         }
     }
-
+    if (type === 'roman_curtains'){
+        if (!fabricId) {
+            e.preventDefault();
+            showAlert('Пожалуйста, выберите ткань.');
+            return;
+        }
+    }
     // Можно добавить проверку на размеры, если нужно
 });
 </script>
